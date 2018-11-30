@@ -1,0 +1,61 @@
+body,
+html {
+    height: 100%;
+    overflow: hidden;
+    font-size: 1.5vw;
+}
+
+* {
+    margin: 0;
+}
+
+.container {
+    background-image: url('../images/drums.jpg');
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+ul {
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+li {
+    list-style: none;
+    flex: 0 0 7vw;
+    height: 7vw;
+    margin: 1em;
+    background-color: rgba(0,0,0,0.5);
+    text-align: center;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: all .05s;
+}
+
+li:hover, .hit {
+    border: 2px solid #ffdd00;
+    box-shadow: 0 0 2vw #ffdd00;
+    transform: scale(1.1);
+}
+
+.key {
+    font-size: 1.5em;
+    color: #ffffff;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.sound {
+    color: #ffdd00;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    padding-top: .5em;
+}
