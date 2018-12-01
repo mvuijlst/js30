@@ -22,6 +22,7 @@ html {
     height: 50vmin;
     border: 2vmin solid white;
     border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .hand {
@@ -31,26 +32,46 @@ html {
     transform-origin: right;
 }
 
-.seconds {
-    height: 0.5vmin;
-    background-color: red;
-    margin-top: .5vmin;
-    width: 20vmin;
-    margin-left: 5vmin;
-}
-
-.minutes {
-    width: 22vmin;
-    margin-left: 3vmin;
-}
-
 .hours,
 .minutes {
-    height: 1.5vmin;
     background-color: black;
 }
 
+
 .hours {
-    width: 18vmin;
-    margin-left: 7vmin;
+    height: 2vmin;
+    width: 20vmin;
+    margin-left: 9vmin;
+    margin-top: -0.25vmin;
+    transform: rotate(20deg);
+    transform-origin: calc(100% - 4vmin);
+}
+
+.minutes {
+    height: 1.5vmin;
+    width: 26vmin;
+    margin-left: 3vmin;
+        transform-origin: calc(100% - 4vmin);
+
+}
+
+.seconds {
+    height: 0.5vmin;
+    background-color: #e00;
+    margin-top: .5vmin;
+    width: 27vmin;
+    margin-left: 5vmin;
+    transition: all 0.25s;
+    transition-timing-function: cubic-bezier(0, 2, 0.25, 1);
+    transform-origin: calc(100% - 7vmin);
+}
+
+.seconds::after {
+    content: '';
+    height: 3vmin;
+    width: 3vmin;
+    border-radius: 50%;
+    background-color: #e00;
+    float: left;
+    margin-top: -1.25vmin;
 }

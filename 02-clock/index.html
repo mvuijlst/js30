@@ -24,16 +24,17 @@
         window.addEventListener('DOMContentLoaded', clock);
 
         function clock() {
-            setInterval(drawClock, 20);
+            setInterval(drawClock, 1000);
         }
 
         function drawClock() {
             const now = new Date();
             // const seconds = (now.getSeconds() + now.getMilliseconds() / 1000) * 6 + 90;
-            const seconds = now.getSeconds() * 6 + 90;
-            const minutes = now.getMinutes() * 6 + 90 + seconds / 60;
+            const seconds = (now.getHours() * 60 * 60 + now.getMinutes() * 60 + now.getSeconds()) * 6 + 90;
+            const minutes = (now.getHours() * 60 + now.getMinutes()) * 6 + 90 + seconds / 60;
             const hours = (now.getHours()) % 12 * 30 + 90 + minutes / 60;
 
+            console.log(hours, minutes, seconds);
             document.querySelector('.hours').style.transform = `rotate(${hours}deg)`;
             document.querySelector('.minutes').style.transform = `rotate(${minutes}deg)`;
             document.querySelector('.seconds').style.transform = `rotate(${seconds}deg)`;
