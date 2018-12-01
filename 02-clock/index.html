@@ -14,11 +14,31 @@
 
     <div class="container">
         <div class="clock">
-            <div class="hours"></div>
-            <div class="minutes"></div>
-            <div class="seconds"></div>
+            <div class="hand hours"></div>
+            <div class="hand minutes"></div>
+            <div class="hand seconds"></div>
         </div>
     </div>
+
+    <script>
+        window.addEventListener('DOMContentLoaded', clock);
+
+        function clock() {
+            setInterval(drawClock, 20);
+        }
+
+        function drawClock() {
+            const now = new Date();
+            // const seconds = (now.getSeconds() + now.getMilliseconds() / 1000) * 6 + 90;
+            const seconds = now.getSeconds() * 6 + 90;
+            const minutes = now.getMinutes() * 6 + 90 + seconds / 60;
+            const hours = (now.getHours()) % 12 * 30 + 90 + minutes / 60;
+
+            document.querySelector('.hours').style.transform = `rotate(${hours}deg)`;
+            document.querySelector('.minutes').style.transform = `rotate(${minutes}deg)`;
+            document.querySelector('.seconds').style.transform = `rotate(${seconds}deg)`;
+        }
+    </script>
 
 </body>
 

@@ -7,3 +7,50 @@ html {
     background-size: cover;
     font-size: 1.5vw;
 }
+
+.container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.clock {
+    /*background-color: rgba(0, 0, 0, 0.5);*/
+    width: 50vmin;
+    height: 50vmin;
+    border: 2vmin solid white;
+    border-radius: 50%;
+}
+
+.hand {
+    position: absolute;
+    top: 50vmin;
+    background-color: black;
+    transform-origin: right;
+}
+
+.seconds {
+    height: 0.5vmin;
+    background-color: red;
+    margin-top: .5vmin;
+    width: 20vmin;
+    margin-left: 5vmin;
+}
+
+.minutes {
+    width: 22vmin;
+    margin-left: 3vmin;
+}
+
+.hours,
+.minutes {
+    height: 1.5vmin;
+    background-color: black;
+}
+
+.hours {
+    width: 18vmin;
+    margin-left: 7vmin;
+}
