@@ -1,0 +1,72 @@
+body,
+html {
+    width: 100%;
+    height: 100%
+}
+
+.gallery {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.pane {
+    background-position: center;
+    background-size: cover;
+    transition: all 0.2s;
+    flex: 0 1 16.666666vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+p {
+    transition: all 0.5s;
+    flex: 0 0 auto;
+    font-family: 'IBM Plex Sans';
+    font-weight: 100;
+    color: #fff;
+    text-shadow: 0 0 0.5vw black,
+        0 0 0.5vw black,
+        0 0 0.5vw black,
+        0 0 0.5vw black;
+    text-align: center;
+    font-size: 4vmin;
+}
+
+.one {
+    background-image: url(../images/venus.jpg);
+}
+
+.two {
+    background-image: url(../images/mars.jpg);
+}
+
+.three {
+    background-image: url(../images/titan.jpg);
+}
+
+.four {
+    background-image: url(../images/earth.jpg);
+}
+
+.five {
+    background-image: url(../images/moon.jpg);
+}
+
+.six {
+    background-image: url(../images/67p.jpg);
+}
+
+.pane p:first-child, .pane p:last-child {
+    opacity: 0;
+}
+
+.pane:hover {
+    flex: 0 0 25vw;
+}
+
+.pane:hover p {
+    opacity: 1;
+}
