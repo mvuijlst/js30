@@ -46,6 +46,22 @@
         </div>
     </div>
 
+    <script>
+        const panes = document.querySelectorAll('.pane');
+        panes.forEach(pane => pane.addEventListener('click', toggle));
+
+        function toggle() {
+            //const that = this;
+            panes.forEach(pane => {
+                if (pane==this) {
+                    pane.classList.toggle('active');
+                } else {
+                    pane.classList.remove('active');
+                }
+            });
+        }
+    </script>
+
 </body>
 
 </html>
