@@ -1,0 +1,30 @@
+:root {
+ --colour: #df769b;
+ --spacing: 10px;
+ --blur: 10px;
+}
+
+body {
+    background-color: #07273b;
+    color: #becfda;
+    font-family: 'IBM Plex Sans';
+    font-weight: 100;
+    font-size: 4vmin;
+    padding: 3vmin;
+}
+
+h1 {
+    font-size: 5vmin;
+    font-weight: 700;
+}
+
+.hl {
+    color: var(--colour);
+}
+
+.content img {
+    margin-top: 2vmin;
+    border: var(--spacing) solid var(--colour);
+    height: 70vh;
+    filter: blur(var(--blur));
+}
