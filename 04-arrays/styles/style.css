@@ -1,0 +1,13 @@
+body {
+    background-color: #072f3b;
+    color: #bed4da;
+    font-family: 'IBM Plex Sans';
+    font-weight: 100;
+    font-size: 4vmin;
+    padding: 3vmin;
+}
+
+h1 {
+    font-size: 5vmin;
+    font-weight: 700;
+}
