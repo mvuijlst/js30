@@ -62,7 +62,6 @@ html {
     width: 27vmin;
     margin-left: 5vmin;
     transition: all 0.25s;
-    transition-timing-function: cubic-bezier(0, 2, 0.25, 1);
     transform-origin: calc(100% - 7vmin);
 }
 
