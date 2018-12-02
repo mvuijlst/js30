@@ -1,0 +1,47 @@
+body,
+html {
+    font-family: 'IBM Plex Sans';
+    font-size: 1.2vw;
+    background-color: #072f3b;
+    color: #bed4da;
+    font-family: 'IBM Plex Sans';
+    padding: 2vw;
+    display: flex;
+    justify-content: center;
+}
+
+input {
+    border: 0.5vw solid #16a3b6;
+    border-radius: 0.25vw;
+    background-color: #ddd;
+    color: #444;
+    padding: 0.5vw;
+    width: 20vw;
+}
+
+ul {
+    margin: 0;
+    padding-inline-start: 2vw;
+    padding-inline-end: 2vw;
+}
+
+li {
+    background-color: #d0d6d8;
+    list-style-type: none;
+    margin: 0;
+    text-indent: 0;
+    box-shadow: 0 0 0.3vw rgba(0,0,0,0.05);
+    color: #333;
+    padding: 0.5vw;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0))
+}
+
+li:nth-child(odd) {
+    transform: perspective(7vw) rotate3d(1, 0, 0, -5deg);
+}
+
+li:nth-child(even) {
+    transform: perspective(7vw) rotate3d(1, 0, 0, 5deg) translateY(-0.04vw);
+}
+
