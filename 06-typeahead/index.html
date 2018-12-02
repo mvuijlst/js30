@@ -14,7 +14,7 @@
 
     <form>
         <input type="text">
-        <ul>
+        <ul class="list">
             <li>Zoek een staat</li>
             <li>Of een stad</li>
         </ul>
@@ -23,6 +23,42 @@
     <script>
         const endpoint =
             'https://gist.githubusercontent.com/Miserlou/c5cd8364bf9b2420bb29/raw/2bf258763cdddd704f8ffd3ea9a3e81d25e2c6f6/cities.json';
+
+        const cities = [];
+
+        fetch(endpoint)
+            .then(response => response.json())
+            .then(json => cities.push(...json));
+
+        function findCities(wordToMatch, cities) {
+            return cities.filter(place => {
+                const regex = new RegExp(wordToMatch, 'gi');
+                return place.city.match(regex) || place.state.match(regex);
+            });
+        }
+
+        function numberWithDots(x) {
+            return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".");
+        }
+
+        function showCities() {
+            const cityList = findCities(this.value, cities);
+            const re = new RegExp(this.value, 'gi');
+            const html = cityList.map(city => {
+                return `<li>
+                        <span class="name">
+                            ${city.city.replace(re, `<b>${this.value}</b>`)},
+                            ${city.state.replace(re, `<b>${this.value}</b>`)}
+                        </span>
+                        <span class="pop">${numberWithDots(city.population)}</span>
+                    </li>`;
+            });
+            document.querySelector('.list').innerHTML = html.join('');
+
+        }
+
+        document.querySelector('input').addEventListener('change', showCities);
+        document.querySelector('input').addEventListener('keyup', showCities);
     </script>
 
 </body>

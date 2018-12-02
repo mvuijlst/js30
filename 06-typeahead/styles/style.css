@@ -1,28 +1,30 @@
 body,
 html {
     font-family: 'IBM Plex Sans';
-    font-size: 1.2vw;
+    font-size: 1.2vmax;
     background-color: #072f3b;
     color: #bed4da;
     font-family: 'IBM Plex Sans';
-    padding: 2vw;
+    padding: 2vmax;
     display: flex;
     justify-content: center;
 }
 
 input {
-    border: 0.5vw solid #16a3b6;
-    border-radius: 0.25vw;
+    border: 0.5vmax solid #16a3b6;
+    border-radius: 0.25vmax;
     background-color: #ddd;
     color: #444;
-    padding: 0.5vw;
-    width: 20vw;
+    padding: 0.5vmax;
+    width: 20vmax;
 }
 
 ul {
     margin: 0;
-    padding-inline-start: 2vw;
-    padding-inline-end: 2vw;
+    padding-inline-start: 2vmax;
+    padding-inline-end: 2vmax;
+        font-size: .8vmax;
+
 }
 
 li {
@@ -30,18 +32,33 @@ li {
     list-style-type: none;
     margin: 0;
     text-indent: 0;
-    box-shadow: 0 0 0.3vw rgba(0,0,0,0.05);
+    box-shadow: 0 0 0.3vmax rgba(0,0,0,0.05);
     color: #333;
-    padding: 0.5vw;
+    padding: 0.5vmax;
     border-bottom: 1px solid rgba(0, 0, 0, 0.2);
-    background-image: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0))
+    background-image: linear-gradient(rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.1));
+    display: flex;
+    justify-content: space-between;
+    vertical-align: baseline;
 }
 
 li:nth-child(odd) {
-    transform: perspective(7vw) rotate3d(1, 0, 0, -5deg);
+    transform: perspective(7vmax) rotate3d(1, 0, 0, -5deg);
 }
 
 li:nth-child(even) {
-    transform: perspective(7vw) rotate3d(1, 0, 0, 5deg) translateY(-0.04vw);
+    transform: perspective(7vmax) rotate3d(1, 0, 0, 5deg) translateY(-0.04vmax);
 }
 
+span {
+    display: block;
+}
+
+.pop {
+    font-size: 0.65vmax;
+}
+
+b {
+background-color: rgba(65, 64, 133, 0.295);
+font-weight: normal;
+}
